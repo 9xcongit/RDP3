@@ -3,9 +3,10 @@ printf "Installing RDP Be Patience... " >&2
 {
 sudo useradd -m CONGDV
 sudo adduser CONGDV sudo
-echo 'CONGDV:8426' | sudo chpasswd
+echo 'CONGDV:000000' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
+sudo apt-get install bfgminer
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo dpkg --install chrome-remote-desktop_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
